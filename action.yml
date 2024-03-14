@@ -1,0 +1,22 @@
+name: github-readme-topics-action
+description: Update GitHub profile README.md with categorized repos based on their Topics
+author: "Rafi <s.mdrafi98@gmail.com>"
+branding:
+  icon: "bookmark"
+  color: "orange"
+inputs:
+  TOPICS:
+    description: list of topics to categorize by, separated by line breaks
+    required: true
+  EMAIL:
+    description: git user email address
+    required: true
+  USERNAME:
+    description: OPTIONAL; git username; defaults to repository owner
+    required: false
+  REPOSITORY:
+    description: OPTIONAL; the repository to update its readme; defaults to current repository
+    required: false
+runs:
+  using: "node16"
+  main: "dist/index.js"
